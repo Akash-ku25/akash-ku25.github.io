@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width,initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/K7dV25r/DSC-0127.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<style type="text/css">
+    body{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+    }
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: red; 
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #b30000;
+    }
+    p::selection, h1::selection, span::selection, .material-icon::selection, .title1::selection, .desc1::selection{
+        background-color: #e74c3c;
+        color: white;
+    }
+    #home{
+        background-image: url(https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        height:130%;
+        width: 100%;
+        min-height: 100%;
+        min-width: 100%;
+        position: relative;
+        font-size: 35px;
+        font-weight: 300;
+        margin: 0;
+        transition: 1s;
+    }
+    /*.home:before{
+        background-size: cover;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 99;
+    }*/
+    
+    .hr{
+        border: 1px solid black;
+        width: 80%;
+    }
+    #dropdown{
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+        top: 10px;
+        left: 15px;
+        display: none;
+    }
+    #next{
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        background-color: rgb(20, 20, 35);
+        position: relative;
+        left: 0%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        display: none;
+        animation: move 1s ease forwards;
+    }
+    @keyframes move{
+        0%{height: 0}
+        100%{height:  450px}
+    }
+    #cross2{
+        position: relative;
+        top: -50px;
+        left: 25px;
+        color: white;
+    }
+    #cross2:hover{
+        color: red;
+        transition: 0.5s;
+    }
+    #person2{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border:5px solid white;
+        position: relative;
+        left: 35%;
+        top: 30px;
+        cursor: pointer;
+    }
+    #name2, #phone{
+        font-family: 'Rubik', sans-serif;
+        position: relative;
+        top: 20px;
+        text-align: center;
+        font-size: 17px;
+        color: gainsboro;
+    }
+    #phone{
+        position: relative;
+        top: 10px;
+    }
+    .fa-mobile-alt, #code{
+        margin-right: 10px;
+    }
+    .button{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-family: 'Rubik', sans-serif;
+        color: white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .button:hover{
+        color: cadetblue;
+        background-color: rgb(20, 70, 35);
+        font-size: 25px;
+        transition: 0.3s;
+        border-left: 6px solid darkred;
+    }
+    #project{
+        margin-top: 20px;
+    }
+    .my_img{
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border:5px solid white;
+        position: relative;
+        top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        animation: img_move 1s ease forwards;
+    }
+    @keyframes img_move{
+        0%{width: 0;
+           height: 0}
+        100%{width: 130px;
+             height: 130px}
+    }
+    .text{
+        color: white;
+        position: relative;
+        text-align: center;
+        top: 45px;
+        animation: text1 1s ease forwards;
+    }
+    @keyframes text1{
+        0%{font-size: 0}
+        100%{font-size: 40px}
+    }
+    #txt2{
+        position: relative;
+        top: 20px;
+        color: #FEB11F;
+        font-size: 40px;
+        animation: text2 1s ease forwards;
+    }
+    @keyframes text2{
+        0%{font-size: 0}
+        100%{font-size: 40px}
+    }
+    #txt3{
+        position: relative;
+        top: -10px;
+        font-size: 50px;
+        animation: text3 1s ease-in-out forwards;
+    }
+    @keyframes text3{
+        0%{font-size: 0}
+        100%{font-size: 50px}
+    }
+    .hire{
+        width: 140px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 2px solid cadetblue;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        transition: 1s;
+        position: relative;
+        top: -15px;
+        left: 45.5%;
+        cursor: pointer;
+        animation: hire 1s ease forwards;
+    }
+    @keyframes hire{
+        0%{left: -10%}
+        100%{left: 45.5%}
+    }
+    .hire:hover{
+        background-color: cadetblue;
+        color: white;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+    }
+    .item{
+        margin: 0 40px;
+        width: 60px;
+        height: 60px;
+        transform: rotate(-30deg) skew(25deg);
+        position: relative;
+        top: 0px;
+        left: 28%;
+        animation: item 1s ease forwards;
+    }
+    @keyframes item{
+        0%{left: -50%}
+        100%{left: 28%}
+    }
+    #item1 > .span5, #item1:hover > .span4, #item1:hover > .span3, #item1:hover > .span2 ,#item1:hover > .span1{
+        background-color: #3B579D;
+    }
+    #item2 > .span5, #item2:hover > .span4, #item2:hover > .span3, #item2:hover > .span2 ,#item2:hover > .span1{
+        background-color: #2CAAE1;
+    }
+    #item3 > .span5, #item3:hover > .span4, #item3:hover > .span3, #item3:hover > .span2 ,#item3:hover > .span1{
+        background-color: #BB007B;
+    }
+    #item4 > .span5, #item4:hover > .span4, #item4:hover > .span3, #item4:hover > .span2 ,#item4:hover > .span1{
+        background-color: #007BB6;
+    }
+    .span5{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        background-color: black;
+        justify-content: center;
+        display: flex !important;
+        color: white;
+        text-decoration: none;
+    }
+    .item:hover > .span5{
+        transform: translate(40px,-40px);
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .item:hover > .span4{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transform: translate(30px,-30px);
+        opacity: 0.8;
+        transition: 0.5s;
+    }
+    .item:hover > .span3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transform: translate(20px,-20px);
+        opacity: 0.6;
+        transition: 0.5s;
+    }
+    .item:hover > .span2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transform: translate(10px,-10px);
+        opacity: 0.4;
+        transition: 0.5s;
+    }
+    .item:hover > .span1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transform: translate(00px,-00px);
+        opacity: 0.2;
+        transition: 0.5s;
+    }
+    .navbar{
+        width: 100%;
+        height: 70px;
+        background-color:#212121;
+        display: flex;
+        border-bottom: 3px solid cadetblue;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+    .links{
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        display: flex;
+    }
+    .item1{
+        margin-right: 50px;
+    }
+    .link{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .link:hover{
+        /*color: #00d2ff;*/
+        color: #f44336;
+    }
+    .active{
+        color: #f44336;
+    }
+    #aboutsection{
+        width: 100%;
+        height: auto;
+        background-color: white; 
+        transition: 1s;
+        overflow: hidden;
+    }
+    h1{
+        text-align: center;
+        position: relative;
+        top: 20px;
+        font-size: 40px;
+    }
+    .hrline1{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 5%;
+        height: 3px;
+        background-color: gray;
+        border-radius: 10px;
+    }
+    #txt4{
+        text-align: center;
+        color: slategray;
+        font-size: 18px;
+    }
+    .section{
+        width: 86%;
+        height: auto;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    .detail{
+        width:31%;
+        height: 100%;
+        background-color: white;
+        margin-right: 2%;
+        float: left;
+    }
+    .image{
+        width: 31%;
+        height: 100%;
+        background-color: black;
+        margin-right: 4%;
+        position: relative;
+        top: 30px;
+        float: left;
+    }
+    .skills{
+        width: 32%;
+        height: 100%;
+        float: left;
+    }
+    #txt5{
+        font-size: 30px;
+        font-weight: 1000;
+    }
+    #txt6{
+        font-size: 22px;
+        color: darkslategray;
+        position: relative;
+        top: -20px;
+    }
+    #txt7{
+        font-size: 18px;
+        position: relative;
+        top: -20px;
+        color: slategray;
+    }
+    #txt8{
+        color:cornflowerblue;
+        font-size: 18px;
+        position: relative;
+        top: -30px;
+        text-decoration: none;
+        cursor:text;
+    }
+    .my_img1{
+        width: 100%;
+        height: 100%;
+    }
+    .cvlink{
+        width: 200px;
+        height: 45px;
+        background-color: #E91E63;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        position: relative;
+        top: -30px;
+        float: left;
+    }
+    .cvlink:hover{
+        background-color: #c0392b;
+    }
+    .resume{
+        text-decoration: none;
+    }
+    .fa-download{
+        margin-left: 8px;
+    }
+    #txt9{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .skill{
+        list-style: none;
+    }
+    .percent{
+        float: right;
+    }
+    .bar{
+        width: 100%;
+        height: 10px;
+        background-color: gainsboro;
+        position: relative;
+        top: -10px;
+    }
+    .html-bar{
+        width: 95%;
+        background-color: #e74c3c;
+        height: 10px;
+        animation: html-bar 2s ease forwards;
+    }
+    @keyframes html-bar{
+        0%{width: 0}
+        100%{width: 95%}
+    }
+    .css-bar{
+        width: 85%;
+        background-color: #16a085;
+        height: 10px;
+        animation: css-bar 2s ease forwards;
+    }
+    @keyframes css-bar{
+        0%{width: 0}
+        100%{width: 85%}
+    }
+    .javascript-bar{
+        width: 70%;
+        background-color: #f1c40f;
+        height: 10px;
+        animation: javascript-bar 2s ease forwards;
+    }
+    @keyframes javascript-bar{
+        0%{width: 0}
+        100%{width: 70%}
+    }
+    .jquery-bar{
+        width: 60%;
+        background-color: #3F51B5;
+        height: 10px;
+        animation: jquery-bar 2s ease forwards;
+    }
+    @keyframes jquery-bar{
+        0%{width: 0}
+        100%{width: 60%}
+    }
+    .bootstrap-bar{
+        width: 75%;
+        background-color: #C2185B;
+        height: 10px;
+        animation: bootstrap-bar 2s ease forwards;
+    }
+    @keyframes bootstrap-bar{
+        0%{width: 0}
+        100%{width: 75%}
+    }
+    .wordpress-bar{
+        width: 80%;
+        background-color: #44bd32;
+        height: 10px;
+        animation: wordpress-bar 2s ease forwards;
+    }
+    @keyframes wordpress-bar{
+        0%{width: 0}
+        100%{width: 80%}
+    }
+    .servicesection{
+        width: 80%;
+        height: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        overflow: hidden;
+        position: relative;
+    }
+    .sections{
+        width: 20%;
+        height: 100%;
+        margin-right: 5%;
+        float: left;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color: #04C2C9;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+    }
+    .icon{
+        text-align: center;
+        position: relative;
+        top: 20px;
+    }
+    .material-icons, .fa-rocket{
+        font-size: 60px;
+        color: white;
+    }
+    .title1{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #626262;
+        position: relative;
+        top: 20px;
+    }
+    .desc1{
+        position: relative;
+        top: 30px;
+        text-align: center;
+        color: slategray;
+    }
+    #projectsection{
+        width: 100%;
+        height: 870px;
+        background-color: #F5F5F5;
+        position: relative;
+        top: 100px; 
+        transition: 1s;
+    }
+    .projects{
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        top: 40px;
+        font-weight: bold;
+    }
+    .hrline3{
+        width: 7%;
+        height: 5px;
+        background-color: #45474A;
+        position: relative;
+        top: 10px;
+        border-radius: 5px;
+    }
+    .works{
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        top: 0px;
+        font-weight: bold;
+        float: none;
+        color: #6C6C6C;
+    }
+    .showcase{
+        width: 84%;
+        height: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: 0px;
+    }
+    .item2{
+        overflow: hidden;
+        width: 33%;
+        float: left;
+        height: 290px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project{
+        width: 100%;
+        height: 290px;
+        margin-left: 20px;
+    }
+    .front{
+        float: left;
+        backface-visibility: hidden;
+        transform: perspective(600px) rotateX(0deg);
+        transition: 1.5s;
+        overflow: hidden;
+        backface-visibility: hidden;
+    }
+    .back{
+        width: 100%;
+        height: 290px;
+        background: #D66D75;
+        background: linear-gradient(to right, #E29587, #D66D75); 
+        background: linear-gradient(to right, #E29587, #D66D75);
+        position: relative;
+        top: -295px;
+        left: 20px;
+        transform: perspective(600px) rotateX(180deg);
+        transition: 1.5s;
+        overflow: hidden;
+        backface-visibility: hidden;
+    }
+    .item2:hover > .front{
+        transform: perspective(600px) rotateX(-180deg);
+    }
+    .item2:hover > .back{
+        transform: perspective(600px) rotateX(0deg);
+    }
+    .title2{
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        position: relative;
+        top: 10px;
+    }
+    .disc2{
+        text-align: center;
+        font-size: 22px;
+        color: black;
+        position: relative;
+        top: -5px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .read_more1{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        background-color: white;
+        border: 2px solid #16a085;
+        transition: 0.5s;
+        position: absolute;
+        left: 30%;
+        top: 220px;
+    }
+    .read_more1:hover{
+        color: white;
+        background-color: #16a085;
+    }
+    #contactsection{
+        width: 100%;
+        height: 680px;
+        background-color: #2D2D2D; 
+        transition: 1s;
+        overflow: hidden;
+    }
+    .txt15{
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        top: 100px;
+        color: white;
+    }
+    .hrline2{
+        width: 10%;
+        height: 5px;
+        background-color: white;
+        position: relative;
+        top: 70px;
+        border-radius: 10px;
+    }
+    .txt17{
+        text-align: center;
+        color: #08B2BA;
+        position: relative;
+        top: 80px;
+    }
+    .address{
+        width: 25%;
+        height: 400px;
+        margin-left: 10%;
+        position: relative;
+        top: 100px;
+        float: left;
+    }
+    .txt16{
+        font-size: 20px;
+    }
+    #txt17, #txt19, #txt21{
+        color: #7A7A7A;
+    }
+    #txt18, #txt20, #txt22{
+        color: white;
+        position: relative;
+        top: -15px;
+    }
+    .form1{
+        width: 50%;
+        height: 350px;
+        margin-right: 10%;
+        float: right;
+        position: relative;
+        top: 100px;
+    }
+    .nameinput, .emailinput, .msginput{
+        width: 100%;
+        height: 10px;
+        color: #656565;
+        background-color: transparent;
+        font-size: 18px;
+        padding: 15px;
+        border: 1px solid #656565;
+        outline: none;
+        margin-bottom: 15px;
+        color: white;
+        transition: 0.5s;
+    }
+    .msginput{
+        height: 150px;
+    }
+    .nameinput:focus, .emailinput:focus, .msginput:focus{
+        border: 1px solid aqua;
+        box-shadow: 0 0 5px aqua;
+    }
+    .send{
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        float: right;
+        background-color: #12CBC4;
+        border: 1px solid #12CBC4;
+        transition: .5s;
+    }
+    .send:hover{
+        background-color: #EE5A24;
+        color: white;
+    }
+    .hrline4{
+        position: relative;
+        top: -15px;
+    }
+    .footersection{
+        width: 100%;
+        height: 70px;
+        background-color: #1B242F;
+        position: relative;
+        top: -35px;
+    }
+    .txt20{
+        text-align: center;
+        color: #717171;
+        position: relative;
+        top: 20px;
+        color: #12CBC4;
+        font-size: 22px;
+    }
+    .fa-heart{
+        color: crimson;
+    }
+    @media only screen and (max-width:1090px){
+        .item{
+            position: relative;
+            left: 17%;
+        }
+        #home{
+            height: 120%;
+            width: auto;
+        }
+    }
+    @media only screen and (max-width:1000px){
+        .section{
+            height: 1120px;
+            overflow: hidden;
+        }
+        .detail{
+            width: 50%;
+            height: 30%;
+            margin-right: 2%;
+            float: none;
+        }
+        .image{
+            width: 40%;
+            height: 50%;
+            position: relative;
+            top: -400px;
+            float: right;
+        }
+        .skills{
+            width: 100%;
+            height: 50%;
+            position: relative;
+            top: -400px;
+        }
+        #projectsection{
+            height: 1200px;
+        }
+        .item2{
+            width: 49%;
+            position: relative;
+            left: 3.5%;
+        }
+        .front, .back{
+            width: 90%;
+        }
+        .sections{
+            width: 45%;
+            height: 45%;
+        }
+        .servicesection{
+            height: 600px;
+        }
+    }
+    @media only screen and (max-width:750px){   
+        @keyframes item{
+        0%{left: -50%;
+            position: relative;
+            top: -70px}
+        100%{left: 5%;
+            position: relative;
+            top: -10px}
+        }
+        .hire{
+            position: relative;
+            left: 40%;
+        }
+        #txt3{
+            font-size: 40px;
+        }
+        .fab{
+            font-size: 25px;
+        }
+        #contactsection{
+            height: 1000px;
+        }
+        .address{
+            width: 80%;
+            float: none;
+        }
+        .form1{
+            float: left;
+            width: 80%;
+            position: relative;
+            top: 0px;
+            margin-left: 10%;
+        }
+    }
+    @media only screen and (max-width:600px){
+        .navbar{
+            display: none;
+        }
+        #dropdown{
+            display: block;
+            position: fixed;
+            z-index: 1;
+        }
+        #next{
+            position: fixed;
+            z-index: 1;
+        }
+        .item{
+            transform: rotate(0deg) skewX(0deg);
+        }
+        .item:hover > .span5{
+            transform: translate(0px, 0px);
+        }
+        .fa-facebook-f:hover{
+            color: #3B579D;
+        }
+        .fa-twitter:hover{
+            color: #2CAAE1;
+        }
+        .fa-instagram:hover{
+            color: #BB007B;
+        }
+        .fa-linkedin-in:hover{
+            color: #007BB6;
+        }
+        .fa-facebook-f, .fa-twitter, .fa-instagram, .fa-linkedin-in{
+            font-size: 20px;
+        }
+        @keyframes item{
+        0%{left: -50%;
+            position: relative;
+            top: -70px}
+        100%{left: -5%;
+            position: relative;
+            top: -10px}
+        }
+        @keyframes hire{
+            0%{left: -10%}
+            100%{left: 30.5%}
+        }
+        .sections{
+            width: 100%;
+            height: 25%;
+        }
+        #section4{
+            margin-bottom: 50px;
+        }
+        .section{
+            height: 1420px;
+        }
+        .servicesection{
+            height: auto;
+            position: relative;
+            top: 0px;
+        }
+        .detail{
+            width: 100%;
+            height: 30%;
+        }
+        .image{
+            width:100%;
+            height: 30%;
+            position: relative;
+            top: 20px;
+        }
+        .skills{
+            height: 30%;
+            position: relative;
+            top: 20px;
+        }
+        #projectsection{
+            height: 2200px;
+        }
+        .item2{
+            width: 100%;
+            position: relative;
+            left: 0;
+        }
+        .front, .back{
+            width: 100%;
+        }
+        .team{
+            width: 600px;
+        }
+        .nameinput, .emailinput, .msginput{
+            width: 90%;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <section id="home">
+            <div class="content">
+                <button id="dropdown"><hr class="hr"><hr class="hr"><hr class="hr"></button>
+            <div id="next">
+                <i id="cross2" class="fas fa-times fa-sm"></i>
+                <img id="person2" src="https://i.ibb.co/K7dV25r/DSC-0127.jpg">
+                <p id="name2">Akash Kumar</p>
+                <p id="phone"><i class="fas fa-mobile-alt"></i><span id="code">+91</span>  9123403015</p>
+                <a href="#home"><button id="project" class="button">Home</button></a>
+                <a href="#aboutsection"><button id="resume" class="button">About Me</button>
+                </a>
+                <a href="#projectsection"><button id="hire" class="button">Projects</button></a>
+                <a href="#contactsection"><button id="message" class="button">Contact Me</button></a>
+            </div>
+                <img class ="my_img" src="https://i.ibb.co/K7dV25r/DSC-0127.jpg">
+                <p class="text"id="txt1">Hello! I am Akash Kumar</p>
+                <p id="txt2" class="text">An UX Designer & Web Developer</p>
+                <p id="txt3" class="text">LET'S BUILD SOMETHING AMAZING TOGETHER</p>
+                <a href="#"><button class="hire">Hire Me!</button></a>
+                <ul class="social">
+                   <li class="item" id="item1">
+                      <a href="https://www.facebook.com/profile.php?id=100005358407013"class="span1" target="_blank"><span ></span></a>
+                      <a href="https://www.facebook.com/profile.php?id=100005358407013"class="span2" target="_blank"><span ></span></a>
+                      <a href="https://www.facebook.com/profile.php?id=100005358407013"class="span3" target="_blank"><span ></span></a>
+                      <a href="https://www.facebook.com/profile.php?id=100005358407013"class="span4" target="_blank"><span ></span></a>
+                      <a href="https://www.facebook.com/profile.php?id=100005358407013" class="span5" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                   </li>
+                   <li class="item" id="item2">
+                      <a href="https://twitter.com/Akashku886308?s=09" target="_blank" class="span1"><span ></span></a>
+                      <a href="https://twitter.com/Akashku886308?s=09" target="_blank"class="span2"><span ></span></a>
+                      <a href="https://twitter.com/Akashku886308?s=09" target="_blank"class="span3"><span ></span></a>
+                      <a href="https://twitter.com/Akashku886308?s=09" target="_blank"class="span4"><span ></span></a>
+                      <a href="https://twitter.com/Akashku886308?s=09" target="_blank" class="span5"><span class="fab fa-twitter"></span></a>
+                   </li>
+                   <li class="item" id="item3">
+                      <a href="https://www.instagram.com/akash_kr_25/" target="_blank"class="span1"><span ></span></a>
+                      <a href="https://www.instagram.com/akash_kr_25/" target="_blank"class="span2"><span ></span></a>
+                      <a href="https://www.instagram.com/akash_kr_25/" target="_blank"class="span3"><span ></span></a>
+                      <a href="https://www.instagram.com/akash_kr_25/" target="_blank"class="span4"><span ></span></a>
+                      <a href="https://www.instagram.com/akash_kr_25/" target="_blank" class="span5"><span class="fab fa-instagram"></span></a>
+                   </li>
+                   <li class="item" id="item4">
+                      <a href="https://www.linkedin.com/in/akashkumar25" target="_blank"class="span1"><span ></span></a>
+                      <a href="https://www.linkedin.com/in/akashkumar25" target="_blank"class="span2"><span ></span></a>
+                      <a href="https://www.linkedin.com/in/akashkumar25" target="_blank"class="span3"><span ></span></a>
+                      <a href="https://www.linkedin.com/in/akashkumar25" target="_blank"class="span4"><span ></span></a>
+                      <a href="https://www.linkedin.com/in/akashkumar25" target="_blank" class="span5"><span class="fab fa-linkedin-in"></span></a>
+                   </li>
+                </ul>
+            </div>
+        </section>
+    <div class="navbar">
+        <ul class="links">
+            <li class="item1">
+                <a href="#home" class="link active" id="link1">HOME</a>
+            </li>
+            <li class="item1">
+                <a href="#aboutsection" class="link" id="link2">ABOUT ME</a>
+            </li>
+            <li class="item1"> 
+                <a href="#projectsection" class="link" id="link3">PROJECTS</a>
+            </li>
+            <li class="item1">
+                <a href="#contactsection" class="link" id="link4">CONTACT ME</a>
+            </li>
+        </ul>  
+    </div>
+    <section id="aboutsection">
+        <h1>Who Am I</h1>
+        <hr class="hrline1">
+        <p id="txt4">A person who loves Nature and it's beautiful creation</p>
+        <div class="section">
+            <div class="detail">
+                <div class="content1">
+                    <p id="txt5">Akash Kumar</p>
+                    <p id="txt6">Front End Developer</p>
+                    <p id="txt7">I am an frontend web developer. I love spending time on fixing little details and optimizing web apps. I have vast knowledge in html, css, Javascript , JQuery, wordpress theme development and so on.I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Also I like working in a team, you'll learn faster and much more. As the saying goes: 'two heads are better than one'.<p><a id="txt8" href="#contactsection">Let's make something special.</a></p>
+                    <a class="resume" href="Akash-Kumar-Resume.pdf" target="_blank"><button class="cvlink">DOWNLOAD RESUME<i class="fas fa-download"></i></button></a>
+                </div>
+            </div>
+            <div class="image">
+                <img class ="my_img1" src="https://i.ibb.co/K7dV25r/DSC-0127.jpg">
+            </div>
+            <div class="skills">
+                <p id="txt9">My Skills</p>
+                <p class="topic">HTML<span class="percent">95%</span></p>
+                <div class="bar">
+                    <div class="html-bar"></div>
+                </div>
+                <p class="topic">CSS<span class="percent">85%</span></p>
+                <div class="bar">
+                    <div class="css-bar"></div>
+                </div>
+                <p class="topic">JAVASCRIPT<span class="percent">70%</span></p>
+                <div class="bar">
+                    <div class="javascript-bar"></div>
+                </div>
+                <p class="topic">JQUERY<span class="percent">60%</span></p>
+                <div class="bar">
+                    <div class="jquery-bar"></div>
+                </div>
+                <p class="topic">BOOTSTRAP<span class="percent">75%</span></p>
+                <div class="bar">
+                    <div class="bootstrap-bar"></div>
+                </div>
+                <p class="topic">WORDPRESS<span class="percent">80%</span></p>
+                <div class="bar">
+                    <div class="wordpress-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="servicesection">
+            <div class="sections" id="section1">
+                <div class="circle">
+                    <div class="icon">
+                        <i class="material-icons">new_releases</i>
+                    </div>
+                </div>
+                <div class="title1">
+                     FAST
+                </div>
+                <div class="desc1">
+                     Fast load times and lag free interaction, my highest priority.
+                </div>
+            </div>
+            <div class="sections" id="section2">
+                <div class="circle">
+                    <div class="icon">
+                        <i class="material-icons">devices</i>
+                    </div>
+                </div>
+                <div class="title1">
+                     RESPONSIVE
+                </div>
+                <div class="desc1">
+                     My layouts will work on any device, big or small.
+                </div>
+            </div>
+            <div class="sections" id="section3">
+                <div class="circle">
+                    <div class="icon">
+                        <i class="material-icons">lightbulb_outline</i>
+                    </div>
+                </div>
+                <div class="title1">
+                     INTUITIVE
+                </div>
+                <div class="desc1">
+                     Strong preference for easy to use, intuitive UX/UI.
+                </div>
+            </div>
+            <div class="sections" id="section4">
+                <div class="circle">
+                    <div class="icon">
+                        <i class="fas fa-rocket "></i>
+                    </div>
+                </div>
+                <div class="title1">
+                     DYNAMIC
+                </div>
+                <div class="desc1">
+                     Websites don't have to be static, I love making pages come to life.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projectsection">
+        <p class="projects">PROJECTS</p>
+        <hr class="hrline3">
+        <p class="works">To See all of My Work : <a href="project.html" class="worklink" target="_blank">Click here</a></p>
+        <div class="showcase">
+            <div class="item2">
+                <div class="front">
+                    <img id="project1" class="project" src="images/capture_20190607002846.png">
+                </div>
+                <div class="back">
+                    <p class="title2">PIG GAME</p>
+                    <p class="disc2">An interesting and addictive Roll dice game played between two players.</p>
+                    <a class="read_more" href="Pig_Game/index.html" target="_blank"><button class="read_more1">LIVE DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project2" class="project" src="images/capture_20190607003815.png">
+                </div>
+                <div class="back">
+                    <p class="title2">LOGIN & SIGNUP FORM</p>
+                    <p class="disc2">Login and Signup form comined which can be easily changed by a button. In this materialize button and input is used.</p>
+                    <a class="read_more" href="login-and-signup-form/index.html" target="_blank"><button class="read_more1">LIVE DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project3" class="project" src="images/Screenshot%20(25).png">
+                </div>
+                <div class="back">
+                    <p class="title2">TESTIMONIAL</p>
+                    <p class="disc2">A responsive and attractive testimonial snippet for any Website and have a beautiful animation on hover.</p>
+                    <a class="read_more" href="Testimonial/index.html" target="_blank"><button class="read_more1">LIVE DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project4" class="project" src="images/capture_20190607002416.png">
+                </div>
+                <div class="back">
+                    <p class="title2">TIC-TAC-TOE</p>
+                    <p class="disc2">Our favorite childhood game which almost all of us must played. It is a two player game. Let's play it with your friend.</p>
+                    <a class="read_more" href="Tic-Tac-Toe/index.html" target="_blank"><button class="read_more1">LIVE DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project5" class="project" src="images/capture_20190607004224.png">
+                </div>
+                <div class="back">
+                    <p class="title2">PERSONAL PROFILE</p>
+                    <p class="disc2">Personal profile of an user with a big follow button and social media links and a menu bar link. </p>
+                    <a class="read_more" href="Personal_Profile/index.html" target="_blank"><button class="read_more1">LIVE DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project6" class="project" src="images/Screenshot%20(45).png">
+                </div>
+                <div class="back">
+                    <p class="title2">WORK SHOWCASE</p>
+                    <p class="disc2">It is an awesome responsive and attractive gallery which can either be used as testimonial or your work showcase.</p>
+                    <a class="read_more" href="gallery/index.html" target="_blank"><button class="read_more1">LIVE DEMO</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactsection">
+        <p class="txt15">Get In Touch</p>
+        <hr class="hrline2">
+        <p class="txt17">Have a question or want to work together ?</p>
+        <div class="address">
+            <p class="txt16" id="txt17">Akash</p>
+            <p class="txt16" id="txt18">A-107, Neelkanth Boys Hostel, NIT Hamirpur, 177005</p>
+            <p class="txt16" id="txt19">Call Me</p>
+            <p class="txt16" id="txt20">+91 9123403015</p>
+            <p class="txt16" id="txt21">Email Me</p>
+            <p class="txt16" id="txt22">akash.kr0925@gmail.com</p>
+        </div>
+        <div class="form1">
+            <form method="post" action="contact_form.php">
+                <input class="nameinput" name="name" type="text" placeholder="Full Name" required>
+                <input class="emailinput" name="email" type="email" placeholder="Email" required>
+                <textarea class="msginput" name="message" type="text" placeholder="Message" required></textarea>
+                <a href="#"><button class="send">Send</button></a>
+            </form>
+        </div>
+    </section>
+    <hr class="hrline4">
+    <div class="footersection">
+        <p class="txt20">Made With <i class="fas fa-heart"></i> By Akash Kumar</p>
+    </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+    document.getElementById("link1").onclick = function(){
+        document.getElementById("link2").classList.remove("active");
+        document.getElementById("link3").classList.remove("active");
+        document.getElementById("link4").classList.remove("active");
+        document.getElementById("link1").classList.add("active");
+    };
+    document.getElementById("link2").onclick = function(){
+        document.getElementById("link1").classList.remove("active");
+        document.getElementById("link3").classList.remove("active");
+        document.getElementById("link4").classList.remove("active");
+        document.getElementById("link2").classList.add("active");
+    };
+    document.getElementById("link3").onclick = function(){
+        document.getElementById("link1").classList.remove("active");
+        document.getElementById("link2").classList.remove("active");
+        document.getElementById("link4").classList.remove("active");
+        document.getElementById("link3").classList.add("active");
+    };
+    document.getElementById("link4").onclick = function(){
+        document.getElementById("link1").classList.remove("active");
+        document.getElementById("link2").classList.remove("active");
+        document.getElementById("link3").classList.remove("active");
+        document.getElementById("link4").classList.add("active");
+    };
+
+    document.getElementById("cross2").onclick= function(){
+        document.getElementById("next").style.display = "none";
+    };
+    
+    document.getElementById("dropdown").onclick = function(){
+        document.getElementById("next").style.display = "block";
+    };
+    
+    var homedistance, aboutdistance, projectdistance, contactdistance;
+    
+    function finddistance(){
+        
+        var scrollTop     = $(window).scrollTop(),
+        homeOffset = $('#home').offset().top,
+        aboutOffset = $('#aboutsection').offset().top,
+        projectOffset = $('#projectsection').offset().top,
+        contactOffset = $('#contactsection').offset().top;
+        homedistance      = (homeOffset - scrollTop);
+        aboutdistance     = (aboutOffset - scrollTop);
+        projectdistance      = (projectOffset - scrollTop);
+        contactdistance      = (contactOffset - scrollTop);
+        
+        console.log(homedistance);
+        console.log(aboutdistance);
+        console.log(projectdistance);
+        console.log(contactdistance);
+        
+    };
+    
+    setInterval(finddistance, 10);
+    
+    jQuery(function($){
+    var roles = ['An UX Designer', 'A Web Developer', 'Javascript Programmer'];
+    //used to determine which is the next roles to be displayed
+    var counter = 0;
+    var $role = $('#txt2')
+    //repeat the passed function at the specified interval - it is in milliseconds
+    setInterval(function(){
+        //display the role and increment the counter to point to next role
+        $role.text(roles[counter++]);
+        //if it is the last role in the array point back to the first item
+        if(counter >= roles.length){
+            counter = 0;
+        }
+    }, 1000)
+})
+</script>
+</html>

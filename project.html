@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width,initial-scale=1.0">
+    <title>PROJECTS</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/K7dV25r/DSC-0127.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<style type="text/css">
+    body{
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+    }
+    p::selection, h1::selection, span::selection, .material-icon::selection, .title1::selection, .desc1::selection{
+        background-color: #e74c3c;
+        color: white;
+    }
+    #aboutsection{
+        width: 100%;
+        height: auto;
+        background-color: white; 
+        transition: 1s;
+        overflow: hidden;
+    }
+    h1{
+        text-align: center;
+        position: relative;
+        top: 20px;
+        font-size: 40px;
+        animation: h1 1s ease forwards;
+    }
+    @keyframes h1{
+        0%{top: -100px}
+        80%{top: 30px}
+        100%{top: 20px}
+    }
+    .hrline1, .hrline2{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 5%;
+        height: 3px;
+        background-color: gray;
+        border-radius: 10px;
+        animation: hrline1 1s ease forwards;
+    }
+    @keyframes hrline1{
+        0%{width: 0.5%}
+        100%{width: 5%}
+    }
+    .hrline2{
+        animation: hrline2 1s ease forwards;
+        position: relative;
+        top: -240px;
+    }
+    @keyframes hrline2{
+        0%{width: 0.5%}
+        100%{width: 7%}
+    }
+    #txt4{
+        text-align: center;
+        color: slategray;
+        font-size: 18px;
+        position: relative;
+        top: 0px;
+        animation: txt4 1s ease forwards;
+    }
+    @keyframes txt4{
+        0%{top: -200px}
+        80%{top: 10px}
+        100%{top: 0px}
+    }
+    .section{
+        width: 86%;
+        height: auto;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    .detail{
+        width:31%;
+        height: 100%;
+        background-color: white;
+        margin-right: 2%;
+        float: left;
+    }
+    .image{
+        width: 31%;
+        height: 100%;
+        background-color: black;
+        margin-right: 4%;
+        position: relative;
+        top: 30px;
+        float: left;
+    }
+    .skills{
+        width: 32%;
+        height: 100%;
+        float: left;
+    }
+    #txt5{
+        font-size: 30px;
+        font-weight: 1000;
+    }
+    #txt6{
+        font-size: 22px;
+        color: darkslategray;
+        position: relative;
+        top: -20px;
+    }
+    #txt7{
+        font-size: 18px;
+        position: relative;
+        top: -20px;
+        color: slategray;
+    }
+    #txt8{
+        color:cornflowerblue;
+        font-size: 18px;
+        position: relative;
+        top: -30px;
+        text-decoration: none;
+        cursor:text;
+    }
+    .my_img1{
+        width: 100%;
+        height: 100%;
+    }
+    .cvlink{
+        width: 200px;
+        height: 45px;
+        background-color: #E91E63;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        position: relative;
+        top: -30px;
+        float: left;
+    }
+    .cvlink:hover{
+        background-color: #c0392b;
+    }
+    .resume{
+        text-decoration: none;
+    }
+    .fa-download{
+        margin-left: 8px;
+    }
+    #txt9{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .skill{
+        list-style: none;
+    }
+    .percent{
+        float: right;
+    }
+    .bar{
+        width: 100%;
+        height: 10px;
+        background-color: gainsboro;
+        position: relative;
+        top: -10px;
+    }
+    .html-bar{
+        width: 95%;
+        background-color: #e74c3c;
+        height: 10px;
+        animation: html-bar 2s ease forwards;
+    }
+    @keyframes html-bar{
+        0%{width: 0}
+        100%{width: 95%}
+    }
+    .css-bar{
+        width: 85%;
+        background-color: #16a085;
+        height: 10px;
+        animation: css-bar 2s ease forwards;
+    }
+    @keyframes css-bar{
+        0%{width: 0}
+        100%{width: 85%}
+    }
+    .javascript-bar{
+        width: 70%;
+        background-color: #f1c40f;
+        height: 10px;
+        animation: javascript-bar 2s ease forwards;
+    }
+    @keyframes javascript-bar{
+        0%{width: 0}
+        100%{width: 70%}
+    }
+    .jquery-bar{
+        width: 60%;
+        background-color: #3F51B5;
+        height: 10px;
+        animation: jquery-bar 2s ease forwards;
+    }
+    @keyframes jquery-bar{
+        0%{width: 0}
+        100%{width: 60%}
+    }
+    .bootstrap-bar{
+        width: 75%;
+        background-color: #C2185B;
+        height: 10px;
+        animation: bootstrap-bar 2s ease forwards;
+    }
+    @keyframes bootstrap-bar{
+        0%{width: 0}
+        100%{width: 75%}
+    }
+    .wordpress-bar{
+        width: 80%;
+        background-color: #44bd32;
+        height: 10px;
+        animation: wordpress-bar 2s ease forwards;
+    }
+    @keyframes wordpress-bar{
+        0%{width: 0}
+        100%{width: 80%}
+    }
+    #worksection{
+        width: 100%;
+        height: 700px;
+        background-color: #F5F5F5;
+        position: relative;
+        top: 80px;
+    }
+    .showcase{
+        width: 86%;
+        height: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: -200px;
+        overflow-x: hidden;
+    }
+    .item2{
+        overflow: hidden;
+        width: 33%;
+        float: left;
+        height: 290px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project{
+        width: 100%;
+        height: 290px;
+        margin-left: 20px;
+        overflow-x: hidden;
+    }
+    .front{
+        float: left;
+        backface-visibility: hidden;
+        transform: perspective(600px) rotateX(0deg);
+        transition: 1.5s;
+        overflow: hidden;
+        backface-visibility: hidden;
+    }
+    .back{
+        width: 100%;
+        height: 290px;
+        background: #D66D75;
+        background: linear-gradient(to right, #E29587, #D66D75); 
+        background: linear-gradient(to right, #E29587, #D66D75);
+        position: relative;
+        top: -295px;
+        left: 20px;
+        transform: perspective(600px) rotateX(180deg);
+        transition: 1.5s;
+        overflow: hidden;
+        backface-visibility: hidden;
+    }
+    .item2:hover > .front{
+        transform: perspective(600px) rotateX(-180deg);
+    }
+    .item2:hover > .back{
+        transform: perspective(600px) rotateX(0deg);
+    }
+    .title2{
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        position: relative;
+        top: 10px;
+    }
+    .disc2{
+        text-align: center;
+        font-size: 22px;
+        color: black;
+        position: relative;
+        top: -5px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .read_more1{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        background-color: white;
+        border: 2px solid #16a085;
+        transition: 0.5s;
+        position: absolute;
+        left: 30%;
+        top: 220px;
+    }
+    .read_more1:hover{
+        color: white;
+        background-color: #16a085;
+    }
+    .hrline4{
+        position: relative;
+        top: 166.3px;
+    }
+    .footersection{
+        width: 100%;
+        height: 70px;
+        background-color: #1B242F;
+        position: relative;
+        top: 146px;
+    }
+    .txt20{
+        text-align: center;
+        color: #717171;
+        position: relative;
+        top: 22px;
+        color: #12CBC4;
+        font-size: 20px;
+    }
+    .fa-heart{
+        color:crimson;
+    }
+</style>
+<body>
+    <section id="aboutsection">
+        <h1>Who Am I</h1>
+        <hr class="hrline1">
+        <p id="txt4">A person who loves Nature and it's beautiful creation</p>
+        <div class="section">
+            <div class="detail">
+                <div class="content1">
+                    <p id="txt5">Akash Kumar</p>
+                    <p id="txt6">Front End Developer</p>
+                    <p id="txt7">I am an frontend web developer. I love spending time on fixing little details and optimizing web apps. I have vast knowledge in html, css, Javascript , JQuery, wordpress theme development and so on.I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Also I like working in a team, you'll learn faster and much more. As the saying goes: 'two heads are better than one'.<p><a id="txt8" href="#contactsection">Let's make something special.</a></p>
+                    <a class="resume" href="Akash%20Kumar%20Resume%20(1).pdf" target="_blank"><button class="cvlink">DOWNLOAD RESUME<i class="fas fa-download"></i></button></a>
+                </div>
+            </div>
+            <div class="image">
+                <img class ="my_img1" src="https://i.ibb.co/K7dV25r/DSC-0127.jpg">
+            </div>
+            <div class="skills">
+                <p id="txt9">My Skills</p>
+                <p class="topic">HTML<span class="percent">95%</span></p>
+                <div class="bar">
+                    <div class="html-bar"></div>
+                </div>
+                <p class="topic">CSS<span class="percent">85%</span></p>
+                <div class="bar">
+                    <div class="css-bar"></div>
+                </div>
+                <p class="topic">JAVASCRIPT<span class="percent">70%</span></p>
+                <div class="bar">
+                    <div class="javascript-bar"></div>
+                </div>
+                <p class="topic">JQUERY<span class="percent">60%</span></p>
+                <div class="bar">
+                    <div class="jquery-bar"></div>
+                </div>
+                <p class="topic">BOOTSTRAP<span class="percent">75%</span></p>
+                <div class="bar">
+                    <div class="bootstrap-bar"></div>
+                </div>
+                <p class="topic">WORDPRESS<span class="percent">80%</span></p>
+                <div class="bar">
+                    <div class="wordpress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="worksection">
+        <h1 class="project">My Works</h1>
+        <hr class="hrline2">
+        <div class="showcase">
+            <div class="item2">
+                <div class="front">
+                    <img id="project1" class="project" src="images/capture_20190607002846.png">
+                </div>
+                <div class="back">
+                    <p class="title2">PIG GAME</p>
+                    <p class="disc2">An interesting and addictive Roll dice game played between two players.</p>
+                    <a class="read_more" href="Pig_Game/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project2" class="project" src="images/capture_20190607003815.png">
+                </div>
+                <div class="back">
+                    <p class="title2">LOGIN & SIGNUP FORM</p>
+                    <p class="disc2">Login and Signup form comined which can be easily changed by a button. In this materialize button and input is used.</p>
+                    <a class="read_more" href="login-and-signup-form/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project3" class="project" src="images/Screenshot%20(25).png">
+                </div>
+                <div class="back">
+                    <p class="title2">TESTIMONIAL</p>
+                    <p class="disc2">A responsive and attractive testimonial snippet for any Website and have a beautiful animation on hover.</p>
+                    <a class="read_more" href="Testimonial/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project4" class="project" src="images/capture_20190607002416.png">
+                </div>
+                <div class="back">
+                    <p class="title2">TIC-TAC-TOE</p>
+                    <p class="disc2">Our favorite childhood game which almost all of us must played. It is a two player game. Let's play it with your friend.</p>
+                    <a class="read_more" href="Tic-Tac-Toe/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project5" class="project" src="images/capture_20190607004224.png">
+                </div>
+                <div class="back">
+                    <p class="title2">PERSONAL PROFILE</p>
+                    <p class="disc2">Personal profile of an user with a big follow button and social media links and a menu bar link. </p>
+                    <a class="read_more" href="Personal_Profile/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project6" class="project" src="images/Screenshot%20(45).png">
+                </div>
+                <div class="back">
+                    <p class="title2">WORK SHOWCASE</p>
+                    <p class="disc2">It is an awesome responsive and attractive gallery which can either be used as testimonial or your work showcase.</p>
+                    <a class="read_more" href="gallery/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project7" class="project" src="images/capture_20190618232013.png">
+                </div>
+                <div class="back">
+                    <p class="title2">ANALOG CLOCK</p>
+                    <p class="disc2">It is an Analog clock Made using HTML Canvas and Javascript.It includes some Mathematical equation.</p>
+                    <a class="read_more" href="Analog-Clock/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project8" class="project" src="images/capture_20190618233418.png">
+                </div>
+                <div class="back">
+                    <p class="title2">BUDGET APP</p>
+                    <p class="disc2">It is an Budget App where you can calculate the Available Budget in the Month using Income and Expenses in the Month.</p>
+                    <a class="read_more" href="Budget-App/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project9" class="project" src=images/Screenshot%20(56).png>
+                </div>
+                <div class="back">
+                    <p class="title2">Calculator</p>
+                    <p class="disc2">An awesome Calculator design which uses  Materialize Button and all function of a normal Calculator.</p>
+                    <a class="read_more" href="Calculator/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project10" class="project" src="images/capture_20190618233835.png">
+                </div>
+                <div class="back">
+                    <p class="title2">LANDING PAGE</p>
+                    <p class="disc2">A Landing Page of An NGO called Dream Girl Foundation.</p>
+                    <a class="read_more" href="dream-girl-foundation/landing%20page.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project11" class="project" src="images/capture_20190618235000.png">
+                </div>
+                <div class="back">
+                    <p class="title2">DRUM KIT ON HOVER</p>
+                    <p class="disc2">A drum kit which produces amazing sound when we hover on each and every Blocks.</p>
+                    <a class="read_more" href="Drum-Kit-on-hover/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project12" class="project" src="images/capture_20190618235239.png">
+                </div>
+                <div class="back">
+                    <p class="title2">DRUM KIT ON KEY PRESS</p>
+                    <p class="disc2">Another Drum Kit which produces amazing Sounds when we press corresponding Keys.</p>
+                    <a class="read_more" href="Drum-Kit-using-keyboard/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project13" class="project" src="images/Screenshot%20(60).png">
+                </div>
+                <div class="back">
+                    <p class="title2">WEB TEMPLATE</p>
+                    <p class="disc2">It is a single page web Template having Parallax effect, card content, and awesome contact form.</p>
+                    <a class="read_more" href="MY-Template/Index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project14" class="project" src="images/capture_20190618235911.png">
+                </div>
+                <div class="back">
+                    <p class="title2">TO-DO-LIST</p>
+                    <p class="disc2">An web App where you can list all your work that you have to do. You don't need to remember all these works, just note it down here.</p>
+                    <a class="read_more" href="To-Do-List/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project15" class="project" src="images/capture_20190619000144.png">
+                </div>
+                <div class="back">
+                    <p class="title2">REACTION-TESTER</p>
+                    <p class="disc2">A interactive Javascript Game in which different objects are being produced as you click one.click the objects as fast as possible.</p>
+                    <a class="read_more" href="Reaction-Tester/Reaction%20Tester.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project16" class="project" src="images/Screenshot%20(53).png">
+                </div>
+                <div class="back">
+                    <p class="title2">NEWS-CARD</p>
+                    <p class="disc2">It is a news card, with photos and content. It shows a beautiful animation when hovered.</p>
+                    <a class="read_more" href="card-hover-effect/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project17" class="project" src="images/capture_20190603005928.png">
+                </div>
+                <div class="back">
+                    <p class="title2">COUNTER-UP</p>
+                    <p class="disc2">A counter-up section which counts from zero to it's maximum value in a beautiful way.</p>
+                    <a class="read_more" href="Counter/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project18" class="project" src="images/capture_20190530132648.png">
+                </div>
+                <div class="back">
+                    <p class="title2">FOOTER SECTION</p>
+                    <p class="disc2">An awesome responsive footer section with social media icons and also copyright section.</p>
+                    <a class="read_more" href="Footer/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project19" class="project" src="images/capture_20190601145309.png">
+                </div>
+                <div class="back">
+                    <p class="title2">OUR TEAM</p>
+                    <p class="disc2">Responsive team section which rotates 3D on hover and social media icons of every employee.</p>
+                    <a class="read_more" href="Our-Team/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project20" class="project" src="images/Screenshot%20(39).png">
+                </div>
+                <div class="back">
+                    <p class="title2">PRICING TABLE</p>
+                    <p class="disc2">Awesome colorful and Responsive pricing Table which have a beautiful animation on hover.</p>
+                    <a class="read_more" href="Pricing-table/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <img id="project21" class="project" src="images/Screenshot%20(61).png">
+                </div>
+                <div class="back">
+                    <p class="title2">UNNATI SITE</p>
+                    <p class="disc2">Awesome colorful and Responsive pricing Table which have a beautiful animation on hover.</p>
+                    <a class="read_more" href="Unnati/index.html" target="_blank"><button class="read_more1">LAUNCH DEMO</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="hrline4">
+    <div class="footersection">
+        <p class="txt20">Made With <i class="fas fa-heart"></i> By Akash Kumar</p>
+    </div>
+</body>
+</html>
